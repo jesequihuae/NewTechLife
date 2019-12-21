@@ -1,0 +1,8 @@
+CREATE TABLE PostHead(
+	idPostHead INT NOT NULL IDENTITY(1,1),
+	Title VARCHAR(255) NOT NULL,
+	DescriptionPost VARCHAR(255) NULL,
+	ImagePost VARCHAR(255) NULL,
+	DatePosted DATETIME NOT NULL
+)
+

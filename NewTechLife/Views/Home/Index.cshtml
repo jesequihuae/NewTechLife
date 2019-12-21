@@ -1,0 +1,17 @@
+﻿@model IEnumerable<NewTechLife.Models.PostHead>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<ul>
+    @foreach(var PostH in Model)
+    {
+        <li>
+            @PostH.Title
+        </li>
+    }
+</ul>

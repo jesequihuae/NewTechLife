@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Tech Life</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+    <link href="~/Scripts/Carousel.css" rel="stylesheet" />
+    <style>
+        .navbar {
+            height: 50px !important;
+        }
+
+        .navbar-nav > li > a{
+            color: #FFF !important;
+            font-size: 18px !important;
+            transition: border-width 0.1s linear;
+        }
+
+        .navbar-nav > li > a:hover{
+            animation-delay: 2s;
+            border-bottom-color: #000 !important;
+            border-width: 3px; 
+        }
+
+        .navbar-toggle{
+            border:none;
+            background-color:#1A7BEC !important;
+        }
+
+        .navbar-toggle:hover {
+            background-color: #186BCD !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar navbar-fixed-top" style="background-color:#1A7BEC; border-bottom:none; box-shadow: 0 4px 2px -2px gray;">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Blog", "Index", "Home")</li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>All rights reserved to New Tech Life</p>
+        </footer>
+    </div>
+
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
